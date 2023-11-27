@@ -1,0 +1,13 @@
+.imgCarrito{
+    margin-top: 30px;
+    width: 20px;
+    height: 20px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedorCarrito{
+    position: relative;
+    left: 100%;
+  }

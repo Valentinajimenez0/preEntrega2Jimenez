@@ -1,0 +1,13 @@
+.CardItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+}
+picture {
+    display: contents;
+}
+img {
+    height: auto;
+    max-width: 23%;
+}
