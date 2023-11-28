@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 25px;
+    margin: 46px;
 }
 picture {
     display: contents;
 }
-img {
-    height: auto;
-    max-width: 23%;
+.ItemImg {
+        height: auto;
+        max-width: 20%;
 }

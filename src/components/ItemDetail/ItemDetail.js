@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from '../ItemCount/ItemCount';
-
-function ItemDetail  ({ id, name, img, category, description, price, stock }) {
+import "./ItemDetail.css"
+const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+  
   return (
     <div className="Card">
       <img src={img} className="Card-Img-Top" alt={name} />
@@ -12,7 +13,7 @@ function ItemDetail  ({ id, name, img, category, description, price, stock }) {
         <p className="Card-Text">category: {category}</p>
         <p className="Card-Text">description: {description}</p>
         <footer>
-         <ItemCount initial={0} stock={15} onAdd={(quantity) => console.log("cantidad agregada", quantity)}/> 
+         <ItemCount initial={0} stock={stock} onAdd={(quantity) => console.log("cantidad agregada", quantity)}/> 
         </footer>
       </div>
     </div>

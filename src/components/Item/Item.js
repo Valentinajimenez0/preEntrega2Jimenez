@@ -9,7 +9,7 @@ function Item ({id, name, price,img,stock}){
             <h1 className="ItemHeader title">{name}</h1>
             </header>
             <picture>
-                <img src={img} alt={name} className="ItemImg" />
+                <img className="ItemImg" src={img} alt={name}  />
             </picture>
             <section>
                 <p className="Info">

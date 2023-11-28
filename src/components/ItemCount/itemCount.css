@@ -1,7 +1,7 @@
 .Counter {
     width: 24%;
     align-items: center;
-    border: solid;
+    border-style: ridge;
     padding: 11px;
 }
 

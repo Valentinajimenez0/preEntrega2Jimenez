@@ -20,13 +20,13 @@ function ItemCount ({stock, initial, onAdd}){
     return(
         <div className="Counter">
                 <div className="Controls">
-                    <button className="Button" onClick={increment}>+</button>
-                    <button className="Button" onClick={decrement}>-</button>
+                    <button className="button is-primary" onClick={increment}>+</button>
+                    <button className="button is-warning" onClick={decrement}>-</button>
                     <h2 className="Number">cantidad: {quantity}</h2>
 
                 </div>
                 <div>
-                    <button className="Button" onClick={() => onAdd(quantity)}>
+                    <button className="button is-active" onClick={() => onAdd(quantity)}>
                         agregar al carrito
                     </button>
                 </div>

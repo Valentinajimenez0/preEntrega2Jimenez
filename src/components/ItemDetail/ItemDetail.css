@@ -1,0 +1,7 @@
+.Card-Body {
+    align-self: center;
+    width: 56%;
+    text-align: -webkit-center;
+    border: outset;
+    margin-top: 15%;
+}
