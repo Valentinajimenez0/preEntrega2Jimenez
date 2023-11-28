@@ -1,20 +1,20 @@
 
 
 
-function ProfileCard (propiedades){
+// function ProfileCard (propiedades){
 
-let {titulo, img, arroba, } = propiedades
+// let {titulo, img, arroba, } = propiedades
 
-    return (
-        <div>
+//     return (
+//         <div>
 
-            <img src={img} alt="imagen cuadro"></img>
-            <h1>{titulo}</h1>
-            <p>{arroba}</p>
+//             <img src={img} alt="imagen cuadro"></img>
+//             <h1>{titulo}</h1>
+//             <p>{arroba}</p>
 
-        </div>
-    )
+//         </div>
+//     )
 
-}
+// }
 
-export default ProfileCard;
+// export default ProfileCard;

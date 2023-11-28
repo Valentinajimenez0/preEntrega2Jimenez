@@ -5,11 +5,13 @@ const ItemList = ({ productos }) => {
     console.log(productos);
     return (
 
-        <div className="row justify-content-center">
+        <div>
             {productos?.map(prod => <Item key={prod.id} {...prod} />)}
-            {/* {products?.map(prod => <Item key={prod.id} product={prod} />)} */}
         </div>
     )
 }
 
 export default ItemList
+
+
+// className="row justify-content-center"

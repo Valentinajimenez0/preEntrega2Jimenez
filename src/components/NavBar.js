@@ -4,8 +4,7 @@ import { NavLink ,Link } from "react-router-dom"
 
 function NavBar() {
     return (
-        <div>
-            
+        <div> 
            <Link to="/"> <h1 className="text-center">ISECOM</h1></Link>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">

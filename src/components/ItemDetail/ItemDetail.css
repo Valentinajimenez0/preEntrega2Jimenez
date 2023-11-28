@@ -1,7 +1,20 @@
-.Card-Body {
+ .Card-Body {
     align-self: center;
     width: 56%;
     text-align: -webkit-center;
+    /* border: outset; */
+   
+} 
+.imgDetalle{
+    width: 57%;
+    align-self: center;
+    margin-top: 10%;
+}
+.cardDetail{
+    width: 28%;
+    position: relative;
+    left: 36%;
     border: outset;
-    margin-top: 15%;
+    margin-top: 9%;
+    
 }

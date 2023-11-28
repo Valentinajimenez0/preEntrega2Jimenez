@@ -4,7 +4,7 @@ import "./item.css"
 function Item ({id, name, price,img,stock}){
     return(
         
-        <article className="CardItem">
+        <article className="CardItem  ">
             <header className="Header">
             <h1 className="ItemHeader title">{name}</h1>
             </header>
@@ -24,6 +24,7 @@ function Item ({id, name, price,img,stock}){
             </footer>
 
         </article>
+       
     )
 }
 
