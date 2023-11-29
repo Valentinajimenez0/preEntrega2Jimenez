@@ -14,4 +14,3 @@ const ItemList = ({ productos }) => {
 export default ItemList
 
 
-// className="row justify-content-center"
