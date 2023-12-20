@@ -1,8 +1,29 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from '../ItemCount/ItemCount';
 import "./ItemDetail.css"
+import { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/cartContext';
+
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+
+  const [cantidadAgregada, setCantidadAagregada] = useState(0)
+
+  const {addItem} = useContext (CartContext)
+
+  const handleOnAdd = (quantity) => {
+    setCantidadAagregada(quantity)
+
+    const item = {
+      id, name, price
+    }
   
+    addItem(item, quantity)
+    
+  }
+
+  
+
   return (
     <div className="Card cardDetail" >
       <img src={img} className="Card-Img-Top imgDetalle" alt={name} />
@@ -13,7 +34,14 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
         <p className="Card-Text">category: {category}</p>
         <p className="Card-Text">description: {description}</p>
         <footer className='card-text'>
-         <ItemCount initial={0} stock={stock} onAdd={(quantity) => console.log("cantidad agregada", quantity)}/> 
+          {
+            cantidadAgregada > 0 ? (
+             
+              <Link to='/cart' > terminar compra </Link>
+              // console.log (`se agregoo ${cantidadAgregada} `)
+            ) :
+          (<ItemCount initial={0} stock={stock} onAdd={handleOnAdd} />)
+          }
         </footer>
       </div>
     </div>
