@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Valentinajimenez0/preEntrega2Jimenez/static/css/main.21438459.css",
+    "main.js": "/Valentinajimenez0/preEntrega2Jimenez/static/js/main.643f3ce0.js",
+    "static/media/img3.png": "/Valentinajimenez0/preEntrega2Jimenez/static/media/img3.96c73cb49987ccdf1154.png",
+    "index.html": "/Valentinajimenez0/preEntrega2Jimenez/index.html",
+    "main.21438459.css.map": "/Valentinajimenez0/preEntrega2Jimenez/static/css/main.21438459.css.map",
+    "main.643f3ce0.js.map": "/Valentinajimenez0/preEntrega2Jimenez/static/js/main.643f3ce0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21438459.css",
+    "static/js/main.643f3ce0.js"
+  ]
+}
