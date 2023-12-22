@@ -1,11 +1,11 @@
 import { createContext, useState } from "react";
-//import { act } from "react-dom/test-utils";
+// import { act } from "react-dom/test-utils";
 
 export const CartContext = createContext({
     cart: []
 })
 
-export const Cartprovider = ({children}) => {
+export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([])
 
@@ -34,16 +34,15 @@ export const Cartprovider = ({children}) => {
         return cart.some(prod => prod.id === itemId)
     }
 
-    const totalPrice = () => {
-        return cart.reduce((prev,act) => prev + act.quantity * act.price, 0)
-    }
+    const total = cart.reduce((acc, p) => {
+        return acc + (p.price * p.quantity);
+    }, 0);
 
-    const totalQuantity = ()=> cart.reduce((acum, itemsActual)=> acum + itemsActual.quantity, 0);
-
+    const totalQuantity = cart.length;
 
 
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, clearCart, totalPrice, totalQuantity }}>
+        <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, total, totalQuantity }}>
             {children}
         </CartContext.Provider>
     )

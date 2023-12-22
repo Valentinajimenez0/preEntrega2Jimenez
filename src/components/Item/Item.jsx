@@ -13,14 +13,14 @@ function Item ({id, name, price,img,stock}){
             </picture>
             <section>
                 <p className="Info">
-                    precio: ${price}
+                    PRECIO: ${price}
                 </p>
                 <p className="Info">
-                    stock disponible: {stock}
+                    STOCK DISPONIBLE: {stock}
                 </p>
             </section>
             <footer className="ItemFooter">
-                <Link to={`/item/${id}`} className="option btn btn-primary"> ver detalle</Link>
+                <Link to={`/item/${id}`} className="option btn btn-primary"> Ver detalle</Link>
             </footer>
 
         </article>

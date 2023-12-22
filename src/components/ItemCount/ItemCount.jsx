@@ -7,7 +7,7 @@ function ItemCount ({stock, initial, onAdd}){
     const [quantity, setQuantity] = useState(initial)
 
     function increment (){
-        if (quantity <= stock){
+        if (quantity < stock){
             setQuantity(quantity + 1)
         }
     }
@@ -20,14 +20,16 @@ function ItemCount ({stock, initial, onAdd}){
     return(
         <div className="Counter">
                 <div className="Controls">
-                    <button className="button is-primary" onClick={increment}>+</button>
-                    <button className="button is-warning" onClick={decrement}>-</button>
-                    <h2 className="Number">cantidad: {quantity}</h2>
+                    <div className="buttons">
+                    <button className="button m-3 is-primary" onClick={increment}>+</button>
+                                        <h2 className="Number"> {quantity}</h2>
 
+                    <button className="button m-3 is-warning" onClick={decrement}>-</button>
+                    </div>
                 </div>
                 <div>
                     <button className="button is-active" onClick={() => onAdd(quantity)}>
-                        agregar al carrito
+                        Agregar al carrito
                     </button>
                 </div>
         </div>

@@ -3,4 +3,10 @@
     border-style: ridge;
     padding: 11px;
 }
-
+.buttons {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row;
+}

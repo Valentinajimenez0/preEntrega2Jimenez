@@ -5,7 +5,7 @@ import { NavLink ,Link } from "react-router-dom"
 function NavBar() {
     return (
         <div> 
-           <Link to="/"> <h1 className="text-center">ISECOM</h1></Link>
+           <Link to="/" className="text-center"> ISECOM </Link>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                 <Link className="navbar-brand" href="#" to="/">  INICIO </Link>

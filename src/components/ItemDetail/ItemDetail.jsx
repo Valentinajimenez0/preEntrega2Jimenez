@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from '../ItemCount/ItemCount';
 import "./ItemDetail.css"
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/cartContext';
 
@@ -9,7 +9,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
   const [cantidadAgregada, setCantidadAagregada] = useState(0)
 
-  const {addItem} = useContext (CartContext)
+  const { addItem } = useContext(CartContext)
 
   const handleOnAdd = (quantity) => {
     setCantidadAagregada(quantity)
@@ -17,30 +17,36 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     const item = {
       id, name, price
     }
-  
+
     addItem(item, quantity)
-    
+
   }
 
-  
+
 
   return (
     <div className="Card cardDetail" >
       <img src={img} className="Card-Img-Top imgDetalle" alt={name} />
       <div className="Card-Body">
-        <h5 className="Card-Title">{name}</h5>
-        <p className="Card-Text">Precio: ${price}</p>
-        <p className="Card-Text">Stock disponible: {stock}</p>
-        <p className="Card-Text">category: {category}</p>
-        <p className="Card-Text">description: {description}</p>
+        <h1 className="Card-Title">{name}</h1>
+        <p className="Card-Text">PRECIO: ${price}</p>
+        <p className="Card-Text">STOCK DISPONIBLE: {stock}</p>
+        <p className="Card-Text">CATEGORIA: {category}</p>
+        <p className="Card-Text">DESCRIPCION: {description}</p>
         <footer className='card-text'>
           {
             cantidadAgregada > 0 ? (
-             
-              <Link to='/cart' > terminar compra </Link>
-              // console.log (`se agregoo ${cantidadAgregada} `)
+              <div>
+                <p>(Se agrego correctamente al carrito: {cantidadAgregada} {name} )</p>
+
+                <Link to='/cart' className="btn btn-warning mb-2 mt-3 p-2"> Terminar compra </Link>
+                <Link to="/" className="btn btn-primary  mb-2 p-2">Seguir comprando</Link>
+
+              </div>
+
+
             ) :
-          (<ItemCount initial={0} stock={stock} onAdd={handleOnAdd} />)
+              (<ItemCount initial={0} stock={stock} onAdd={handleOnAdd} />)
           }
         </footer>
       </div>
