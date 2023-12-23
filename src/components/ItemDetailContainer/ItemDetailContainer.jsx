@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-//import {getProductsById} from "../asyncMock";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom";

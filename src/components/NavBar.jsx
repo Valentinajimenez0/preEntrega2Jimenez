@@ -5,9 +5,12 @@ import { NavLink ,Link } from "react-router-dom"
 function NavBar() {
     return (
         <div> 
-           <Link to="/" className="text-center"> ISECOM </Link>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                  
+                 <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
+                <Link className="navbar-brand " to="/">
+                 <img src="https://www.isecom.ar/wp-content/uploads/2021/01/logo_isecom.png" alt="Logo de Pagina" height={50}/>
+                  </Link> 
                 <Link className="navbar-brand" href="#" to="/">  INICIO </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>

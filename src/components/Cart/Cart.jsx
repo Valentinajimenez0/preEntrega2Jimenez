@@ -26,7 +26,7 @@ const Cart = () => {
             <h3 className="d-flex justify-content-end" >Total ${total}</h3>
             <div className="buttonCard" >
                 <button onClick={() => clearCart()} className="btn btn-danger">Limpiar Carrito</button>
-                <Link to="/checkout" className="btn btn-secondary">Checkout</Link>
+                <Link to="/checkout" className="btn btn-secondary">Checkout / Finalizar compra</Link>
             </div>
         </div>
     )

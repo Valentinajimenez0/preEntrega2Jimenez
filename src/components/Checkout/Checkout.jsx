@@ -67,7 +67,7 @@ const Checkout = () => {
     }
 
     if(orderId){
-        return <h1 className="fs-1 text-uppercase">El codigo de su orden es: {orderId} </h1>
+        return <h1 className="fs-3 text-center text-uppercase mb-3">El codigo de su orden es: {orderId} </h1>
     }
 
     return (
